@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ankit- Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Preloader -->
+    <div
+      id="preloader"
+      class="fixed inset-0 bg-white z-50 flex items-center justify-center"
+    >
+      <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full bg-white shadow-sm z-10 transition-all duration-300"
+      id="navbar"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-gray-800 font-display">
+          <span class="text-teal-600">&lt;</span>Ankit Sharma<span
+            class="text-teal-600"
+            >/&gt;</span
+          >
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#about"
+            class="nav-link hover:text-teal-600 transition-colors"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="nav-link hover:text-teal-600 transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#services"
+            class="nav-link hover:text-teal-600 transition-colors"
+            >Services</a
+          >
+          <a
+            href="#projects"
+            class="nav-link hover:text-teal-600 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="nav-link hover:text-teal-600 transition-colors"
+            >Experience</a
+          >
+          <a href="#blog" class="nav-link hover:text-teal-600 transition-colors"
+            >Blog</a
+          >
+          <a
+            href="#contact"
+            class="nav-link hover:text-teal-600 transition-colors"
+            >Contact</a
+          >
+        </div>
+        <div class="hidden md:flex items-center space-x-4">
+          <button
+            id="theme-toggle"
+            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+          >
+            <i class="fas fa-moon text-gray-600"></i>
+          </button>
+          <a
+            href="#contact"
+            class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-full transition-colors shadow-md text-sm"
+            >Hire Me</a
+          >
+          <a
+            href="https://github.com/AnkitSharma-007/portfolio"
+            target="_blank"
+            class="btn-secondary font-medium py-2 px-4 rounded-full transition-colors shadow-md text-sm"
+          >
+            <span>Source Code</span>
+            <i class="fa-solid fa-arrow-up-right-from-square px-2"></i>
+          </a>
+        </div>
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white w-full">
+        <div class="container mx-auto px-6 py-3 flex flex-col space-y-4">
+          <a
+            href="#about"
+            class="hover:text-teal-600 transition-colors py-2 border-b border-gray-100"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="hover:text-teal-600 transition-colors py-2 border-b border-gray-100"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="hover:text-teal-600 transition-colors py-2 border-b border-gray-100"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="hover:text-teal-600 transition-colors py-2 border-b border-gray-100"
+            >Experience</a
+          >
+          <a
+            href="#blog"
+            class="hover:text-teal-600 transition-colors py-2 border-b border-gray-100"
+            >Blog</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-teal-600 transition-colors py-2 border-b border-gray-100"
+            >Contact</a
+          >
+          <div class="flex items-center justify-between py-2">
+            <button
+              id="mobile-theme-toggle"
+              class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+            >
+              <i class="fas fa-moon text-gray-600"></i>
+            </button>
+            <a
+              href="#contact"
+              class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-full transition-colors shadow-md text-sm"
+              >Hire Me</a
+            >
+
+            <a
+              href="https://github.com/AnkitSharma-007/portfolio"
+              target="_blank"
+              class="btn-secondary font-medium py-2 px-4 rounded-full transition-colors shadow-md text-sm"
+            >
+              <span>Source Code</span>
+              <i class="fa-solid fa-arrow-up-right-from-square px-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-r from-teal-50 to-cyan-50 pt-16 relative overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-pattern opacity-5"></div>
+      <div
+        class="container mx-auto px-6 py-16 flex flex-col-reverse md:flex-row items-center relative z-10"
+      >
+        <div
+          class="md:w-1/2 text-center md:text-left md:pr-10"
+          data-aos="fade-right"
+        >
+          <div class="mb-4 inline-block">
+            <span
+              class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
+              >Available for Freelance</span
+            >
+          </div>
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 font-display">
+            Hi, I'm
+            <span class="text-teal-600 relative"
+              >Ankit
+              <span
+                class="absolute bottom-0 left-0 w-full h-3 bg-teal-100 -z-10 transform -rotate-1"
+              ></span>
+            </span>
+          </h1>
+          <h2
+            class="text-2xl md:text-3xl text-gray-600 mb-6 font-light"
+            id="typing-text"
+          >
+            Web Developer & Designer
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-lg">
+            I create beautiful, functional websites and applications that help
+            businesses grow and succeed in the digital world.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <a href="#contact" class="btn-primary">
+              <span>Get in Touch</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="#projects" class="btn-secondary">
+              <span>View My Work</span>
+              <i class="fas fa-eye ml-2"></i>
+            </a>
+          </div>
+          <div
+            class="mt-10 flex items-center justify-center md:justify-start space-x-6"
+          >
+            <a
+              href="https://github.com/AnkitSharma-007"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ankitsharma-007/"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://twitter.com/ankitsharma_007"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href="https://ankitsharmablogs.com/"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-dribbble"></i>
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-left">
+          <div class="relative">
+            <div
+              class="absolute -inset-0.5 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full blur opacity-70 animate-pulse"
+            ></div>
+            <img
+              src="/assets/AnkitSharma.jpg"
+              alt="Profile"
+              class="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full mx-auto shadow-lg border-4 border-white"
+            />
+          </div>
+          <div
+            class="absolute top-1/4 right-10 md:right-20 animate-float-slow hidden md:block"
+          >
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+              <i class="fas fa-code text-teal-600 text-2xl"></i>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-1/4 left-10 md:left-20 animate-float hidden md:block"
+          >
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+              <i class="fas fa-paint-brush text-purple-600 text-2xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(255,255,255,0.7)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255,255,255,0.5)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255,255,255,0.3)"
+            />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
+            >About Me</span
+          >
+          <h2 class="text-4xl font-bold mt-4 font-display">Get to Know Me</h2>
+          <div class="w-24 h-1 bg-teal-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-2/5 mb-10 md:mb-0" data-aos="fade-right">
+            <div class="relative">
+              <div
+                class="absolute -inset-4 bg-teal-50 rounded-xl transform -rotate-6"
+              ></div>
+              <img
+                src="assets/AnkitSharma.jpg"
+                alt="About Me"
+                class="relative rounded-xl shadow-lg mx-auto"
+              />
+              <div
+                class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg"
+              >
+                <p class="text-sm font-medium">
+                  <span class="text-teal-600">11+ years</span> of experience
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-3/5 md:pl-16" data-aos="fade-left">
+            <h3 class="text-2xl font-semibold mb-4 font-display">Who I Am</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              I'm a passionate web developer with a keen eye for design and a
+              love for creating seamless user experiences. With a background in
+              Web development, I bring a unique perspective to every project I
+              work on.
+            </p>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              When I'm not coding, you can find me blogging and tweeting about
+              tech. These activities help me stay creative and bring fresh ideas
+              to my work.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-graduation-cap text-teal-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Education</h4>
+                  <p class="text-gray-600">Bachelor of Engineering</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-briefcase text-teal-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Experience</h4>
+                  <p class="text-gray-600">10+ Years in Web Development</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-map-marker-alt text-teal-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Location</h4>
+                  <p class="text-gray-600">Bengaluru, Karnataka, India</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-language text-teal-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Languages</h4>
+                  <p class="text-gray-600">English, Hindi</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <a
+                href="./resume/Ankit_CV.pdf"
+                download
+                class="btn-primary"
+                id="download-cv"
+                target="_blank"
+              >
+                <i class="fas fa-download mr-2"></i>
+                <span>Download CV</span>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <i class="fas fa-paper-plane mr-2"></i>
+                <span>Contact Me</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 relative">
+      <div class="absolute inset-0 bg-pattern opacity-5"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
+            >My Skills</span
+          >
+          <h2 class="text-4xl font-bold mt-4 font-display">
+            Technical Expertise
+          </h2>
+          <div class="w-24 h-1 bg-teal-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Skill Categories -->
+        <div class="mb-16">
+          <ul
+            class="flex flex-wrap justify-center gap-4 mb-10"
+            id="skills-tabs"
+          >
+            <li>
+              <button class="skill-tab active" data-target="frontend">
+                Frontend
+              </button>
+            </li>
+            <li>
+              <button class="skill-tab" data-target="backend">Backend</button>
+            </li>
+            <li>
+              <button class="skill-tab" data-target="design">Design</button>
+            </li>
+            <li>
+              <button class="skill-tab" data-target="tools">Tools</button>
+            </li>
+          </ul>
+
+          <!-- Frontend Skills -->
+          <div class="skill-content active" id="frontend">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fab fa-html5 text-orange-500"></i>
+                <h3>HTML5</h3>
+              </div>
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fab fa-css3-alt text-blue-500"></i>
+                <h3>CSS3</h3>
+              </div>
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fab fa-js text-yellow-500"></i>
+                <h3>JavaScript</h3>
+              </div>
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fa-brands fa-angular text-red-500"></i>
+                <h3>Angular</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div class="skill-content" id="backend">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div class="skill-card">
+                <i class="fab fa-node-js text-green-500"></i>
+                <h3>Node.js</h3>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-database text-gray-600"></i>
+                <h3>SQL</h3>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-python text-blue-600"></i>
+                <h3>Python</h3>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-server text-purple-600"></i>
+                <h3>Express</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design Skills -->
+          <div class="skill-content" id="design">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div class="skill-card">
+                <i class="fab fa-figma text-red-500"></i>
+                <h3>Figma</h3>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-paint-brush text-pink-500"></i>
+                <h3>Photoshop</h3>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-pencil-ruler text-orange-500"></i>
+                <h3>Illustrator</h3>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-palette text-purple-500"></i>
+                <h3>UI/UX</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools Skills -->
+          <div class="skill-content" id="tools">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div class="skill-card">
+                <i class="fab fa-git-alt text-orange-600"></i>
+                <h3>Git</h3>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-docker text-blue-600"></i>
+                <h3>Docker</h3>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-terminal text-gray-800"></i>
+                <h3>Command Line</h3>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-code-branch text-teal-600"></i>
+                <h3>CI/CD</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Skills -->
+        <div class="mt-16" data-aos="fade-up">
+          <h3 class="text-2xl font-semibold mb-6 text-center font-display">
+            Other Skills
+          </h3>
+          <div class="flex flex-wrap justify-center gap-4">
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">SEO</span>
+            <span class="skill-tag">Web Performance</span>
+            <span class="skill-tag">Accessibility</span>
+            <span class="skill-tag">Progressive Web Apps</span>
+            <span class="skill-tag">Cross-Browser Compatibility</span>
+            <span class="skill-tag">Agile Methodology</span>
+            <span class="skill-tag">Problem Solving</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
+            >My Services</span
+          >
+          <h2 class="text-4xl font-bold mt-4 font-display">What I Offer</h2>
+          <div class="w-24 h-1 bg-teal-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>
+              Custom websites built with the latest technologies to ensure fast
+              loading, responsiveness, and optimal user experience.
+            </p>
+            <a href="#contact" class="service-link"
+              >Learn More <i class="fas fa-arrow-right ml-1"></i
+            ></a>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Responsive Design</h3>
+            <p>
+              Websites that look and function perfectly on all devices, from
+              desktops to smartphones and everything in between.
+            </p>
+            <a href="#contact" class="service-link"
+              >Learn More <i class="fas fa-arrow-right ml-1"></i
+            ></a>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Intuitive and engaging user interfaces with seamless user
+              experiences that keep visitors coming back.
+            </p>
+            <a href="#contact" class="service-link"
+              >Learn More <i class="fas fa-arrow-right ml-1"></i
+            ></a>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3>Backend Development</h3>
+            <p>
+              Robust server-side applications with secure authentication,
+              database management, and API integration.
+            </p>
+            <a href="#contact" class="service-link"
+              >Learn More <i class="fas fa-arrow-right ml-1"></i
+            ></a>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>SEO Optimization</h3>
+            <p>
+              Improve your website's visibility in search engines with technical
+              SEO and content optimization strategies.
+            </p>
+            <a href="#contact" class="service-link"
+              >Learn More <i class="fas fa-arrow-right ml-1"></i
+            ></a>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <h3>Maintenance & Support</h3>
+            <p>
+              Ongoing website maintenance, updates, and technical support to
+              keep your site running smoothly.
+            </p>
+            <a href="#contact" class="service-link"
+              >Learn More <i class="fas fa-arrow-right ml-1"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50 relative">
+      <div class="absolute inset-0 bg-pattern opacity-5"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
+            >My Projects</span
+          >
+          <h2 class="text-4xl font-bold mt-4 font-display">Featured Work</h2>
+          <div class="w-24 h-1 bg-teal-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Project Filter -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <button class="project-filter active" data-filter="all">All</button>
+          <button class="project-filter" data-filter="web">
+            Web Development
+          </button>
+          <button class="project-filter" data-filter="app">App Design</button>
+          <button class="project-filter" data-filter="ui">UI/UX</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Project 1 -->
+          <div
+            class="project-card"
+            data-category="web"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="project-img">
+              <img
+                src="./assets/Project_Banner_Dark.png"
+                alt="Project 1"
+                class="w-full h-64 object-cover"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-link"></i
+                  ></a>
+                  <a
+                    href="https://github.com/AnkitSharma-007"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold">E-Commerce Website</h3>
+                <span class="project-category">Web Development</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                A fully responsive e-commerce platform with payment integration,
+                user authentication, and product management.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+              <a
+                href="https://github.com/AnkitSharma-007"
+                target="_blank"
+                class="project-details-btn"
+                >View Case Study</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="project-card"
+            data-category="app"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-img">
+              <img
+                src="./assets/Project_Banner_Light.png"
+                alt="Project 2"
+                class="w-full h-64 object-cover"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://bookcart.azurewebsites.net/"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fas fa-link"></i
+                  ></a>
+                  <a
+                    href="https://github.com/AnkitSharma-007"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold">Task Management App</h3>
+                <span class="project-category">App Design</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                A productivity app that helps users organize tasks, set
+                deadlines, and track progress with intuitive UI.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Tailwind CSS</span>
+              </div>
+              <a
+                href="https://github.com/AnkitSharma-007"
+                target="_blank"
+                class="project-details-btn"
+                >View Case Study</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="project-card"
+            data-category="ui"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-img">
+              <img
+                src="./assets/Project_Banner_Dark.png"
+                alt="Project 3"
+                class="w-full h-64 object-cover"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://bookcart.azurewebsites.net/"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fas fa-link"></i
+                  ></a>
+                  <a
+                    href="https://github.com/AnkitSharma-007"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold">Finance Dashboard</h3>
+                <span class="project-category">UI/UX</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                A comprehensive financial dashboard with data visualization,
+                reporting tools, and user-friendly interface.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Chart.js</span>
+                <span class="tech-tag">CSS Grid</span>
+              </div>
+              <a
+                href="https://github.com/AnkitSharma-007"
+                target="_blank"
+                class="project-details-btn"
+                >View Case Study</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="project-card"
+            data-category="web"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="project-img">
+              <img
+                src="./assets/Project_Banner_Light.png"
+                alt="Project 4"
+                class="w-full h-64 object-cover"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-link"></i
+                  ></a>
+                  <a
+                    href="https://github.com/AnkitSharma-007"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold">Portfolio Template</h3>
+                <span class="project-category">Web Development</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                A customizable portfolio template for creative professionals
+                with smooth animations and modern design.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <a href="#" class="project-details-btn">View Case Study</a>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="project-card"
+            data-category="ui"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="project-img">
+              <img
+                src="./assets/Project_Banner_Dark.png"
+                alt="Project 5"
+                class="w-full h-64 object-cover"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-link"></i
+                  ></a>
+                  <a
+                    href="https://github.com/AnkitSharma-007"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold">Travel App UI</h3>
+                <span class="project-category">UI/UX</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                A beautiful travel application interface with booking system,
+                destination guides, and user reviews.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">Adobe XD</span>
+                <span class="tech-tag">Prototyping</span>
+              </div>
+              <a href="#" class="project-details-btn">View Case Study</a>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="project-card"
+            data-category="app"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="project-img">
+              <img
+                src="./assets/Project_Banner_Light.png"
+                alt="Project 6"
+                class="w-full h-64 object-cover"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-link"></i
+                  ></a>
+                  <a
+                    href="https://github.com/AnkitSharma-007"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold">Fitness Tracker</h3>
+                <span class="project-category">App Design</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                A fitness tracking application with workout plans, progress
+                monitoring, and nutrition guidance.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Redux</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+              <a href="#" class="project-details-btn">View Case Study</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="https://github.com/AnkitSharma-007"
+            target="_blank"
+            class="btn-primary"
+          >
+            <span>View All Projects</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
+            >My Journey</span
+          >
+          <h2 class="text-4xl font-bold mt-4 font-display">
+            Experience & Education
+          </h2>
+          <div class="w-24 h-1 bg-teal-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="flex flex-col md:flex-row">
+          <!-- Work Experience -->
+          <div class="md:w-1/2 md:pr-8 mb-10 md:mb-0">
+            <h3
+              class="text-2xl font-semibold mb-6 text-center md:text-left font-display"
+            >
+              Work Experience
+            </h3>
+
+            <!-- Experience Item 1 -->
+            <div class="timeline-item" data-aos="fade-right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">Dec 2024 - Present</div>
+                <h4>Architect</h4>
+                <p class="timeline-company">DataNimbus</p>
+                <ul class="timeline-list">
+                  <li>
+                    Designed and delivered enterprise Angular applications with
+                    modular architecture, lazy loading, and optimized state
+                    management, improving performance by 30%.
+                  </li>
+                  <li>
+                    Led a team of 5 developers in adopting Angular best
+                    practices, streamlining workflows, and improving delivery
+                    speed by 20%.
+                  </li>
+                  <li>
+                    Enhanced application reliability and user experience by
+                    leveraging NgRx, RxJS, and unit testing, reducing data flow
+                    bugs by 40% and accelerating development cycles.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div
+              class="timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">Aug 2021 – Nov 2024</div>
+                <h4>Senior Software Engineer</h4>
+                <p class="timeline-company">Cisco Systems</p>
+                <ul class="timeline-list">
+                  <li>
+                    Optimized the TAC issue investigation process with
+                    permission-based access control, cutting support turnaround
+                    time by 50% and increasing customer satisfaction by 40%.
+                  </li>
+                  <li>
+                    Led the proxy user feature implementation in CX Cloud,
+                    enabling read-only access for TAC staff, improving
+                    investigation efficiency, and reducing support resolution
+                    times by 70%.
+                  </li>
+                  <li>
+                    Reduced code smells from 5,000 to under 100, achieved 90%
+                    test coverage, and improved page load times to ~3 seconds,
+                    significantly enhancing developer velocity during a
+                    year-long refactor.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div
+              class="timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">Nov 2020 – Jul 2021</div>
+                <h4>Consultant</h4>
+                <p class="timeline-company">Luminescent Digital</p>
+                <ul class="timeline-list">
+                  <li>
+                    Implemented state management with NgRx, optimizing
+                    client-side state handling and reducing debugging time by
+                    30%.
+                  </li>
+                  <li>
+                    Advocated unit testing, achieving 60% test coverage and
+                    ensuring faster development with reliable feature additions.
+                  </li>
+                  <li>
+                    Applied Angular best practices to address memory leaks and
+                    refactor code, achieving a modular architecture and reducing
+                    page load time to under 5 seconds, significantly enhancing
+                    user experience.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Experience Item 4 -->
+            <div
+              class="timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">Aug 2019 – Oct 2020</div>
+                <h4>Senior Member Technical</h4>
+                <p class="timeline-company">ADP</p>
+                <ul class="timeline-list">
+                  <li>
+                    Developed and maintained time and labor management software
+                    (TLMI) in the HR domain, streamlining payroll processing for
+                    10,000+ employees across multiple clients.
+                  </li>
+                  <li>
+                    Built an intuitive UI with Angular and Web APIs, improving
+                    data flow efficiency and cutting payroll processing time by
+                    30%.
+                  </li>
+                  <li>
+                    Enforced high-quality coding standards and best practices,
+                    reducing production bugs by 25% and ensuring a seamless
+                    development lifecycle.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="md:w-1/2 md:pl-8">
+            <h3
+              class="text-2xl font-semibold mb-6 text-center md:text-left font-display"
+            >
+              Education
+            </h3>
+
+            <!-- Education Item 1 -->
+            <div
+              class="timeline-item"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2010 - 2014</div>
+                <h4>Bachelor's in Computer Science</h4>
+                <p class="timeline-company">
+                  Siddaganga Institute of Technology
+                </p>
+                <ul class="timeline-list">
+                  <li>Participated in web development club and hackathons</li>
+                  <li>
+                    Developed a campus event management system as capstone
+                    project
+                  </li>
+                  <li>
+                    Relevant coursework: Programming Fundamentals, Data
+                    Structures, Web Technologies
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="mt-12" data-aos="fade-up">
+              <h3
+                class="text-2xl font-semibold mb-6 text-center md:text-left font-display"
+              >
+                Certifications
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="certification-card">
+                  <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <div>
+                    <h4>Generative AI Blue Belt</h4>
+                    <p>Cisco, 2024</p>
+                  </div>
+                </div>
+                <div class="certification-card">
+                  <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <div>
+                    <h4>AI/ML Fundamentals</h4>
+                    <p>Cisco, 2024</p>
+                  </div>
+                </div>
+                <div class="certification-card">
+                  <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <div>
+                    <h4>Microsoft MVP</h4>
+                    <p>Microsoft, 2020</p>
+                  </div>
+                </div>
+                <div class="certification-card">
+                  <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <div>
+                    <h4>GDE, Angular</h4>
+                    <p>Google, 2020</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
+            >My Blog</span
+          >
+          <h2 class="text-4xl font-bold mt-4 font-display">Latest Articles</h2>
+          <div class="w-24 h-1 bg-teal-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Blog Post 1 -->
+          <div class="blog-card" data-aos="fade-up">
+            <div class="blog-img">
+              <img
+                src="./assets/SOLID-Principles-in-Angular.jpg"
+                alt="Blog 1"
+                class="w-full h-48 object-cover"
+              />
+              <div class="blog-date">
+                <span class="day">15</span>
+                <span class="month">April</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3 text-sm text-gray-600">
+                <i class="fas fa-user-circle mr-2"></i>
+                <span>By Ankit</span>
+                <span class="mx-2">|</span>
+                <i class="fas fa-folder mr-2"></i>
+                <span>Web Development</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">
+                Mastering SOLID Principles in Angular
+              </h3>
+              <p class="text-gray-600 mb-4">
+                In this article, we will explore each of the five SOLID
+                principles. Each principle will be explained with practical,
+                Angular-based examples to demonstrate its real-world
+                application.
+              </p>
+              <a
+                href="https://www.syncfusion.com/blogs/post/angular-solid-principles"
+                target="_blank"
+                class="blog-read-more"
+              >
+                Read More
+                <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-img">
+              <img
+                src="./assets/Angular-Signals-Reactive-Programming-Simplified.jpg"
+                alt="Blog 2"
+                class="w-full h-48 object-cover"
+              />
+              <div class="blog-date">
+                <span class="day">15</span>
+                <span class="month">March</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3 text-sm text-gray-600">
+                <i class="fas fa-user-circle mr-2"></i>
+                <span>By Ankit</span>
+                <span class="mx-2">|</span>
+                <i class="fas fa-folder mr-2"></i>
+                <span>Angular</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">
+                Angular Signals: Reactive Programming Simplified
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Angular Signals offers a synchronous and efficient way to manage
+                state changes, leading to more responsive UIs. It’s a
+                significant step toward a faster and more developer-friendly
+                Angular framework.
+              </p>
+              <a
+                href="https://www.syncfusion.com/blogs/post/angular-signals-reactive-programming"
+                target="_blank"
+                class="blog-read-more"
+              >
+                Read More
+                <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blog-img">
+              <img
+                src="./assets/Zoneless-Change-Detection-in-Angular-18-Boost-Performance.jpg"
+                alt="Blog 3"
+                class="w-full h-48 object-cover"
+              />
+              <div class="blog-date">
+                <span class="day">10</span>
+                <span class="month">Feb</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3 text-sm text-gray-600">
+                <i class="fas fa-user-circle mr-2"></i>
+                <span>By Ankit</span>
+                <span class="mx-2">|</span>
+                <i class="fas fa-folder mr-2"></i>
+                <span>Performance</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">
+                Zoneless Change Detection in Angular 18: Boost Performance
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Angular 18 introduced zoneless change detection, an experimental
+                feature to replace Zone.js. It improves performance by manually
+                controlling when change detection occurs, reducing unnecessary
+                cycles, and enhancing app efficiency.
+              </p>
+              <a
+                href="https://www.syncfusion.com/blogs/post/zoneless-change-detection-angular-18"
+                target="_blank"
+                class="blog-read-more"
+              >
+                Read More
+                <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="https://www.syncfusion.com/blogs/author/ankit-sharma"
+            target="_blank"
+            class="btn-secondary"
+          >
+            <span>View All Articles</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 relative">
+      <div class="absolute inset-0 bg-pattern opacity-5"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
+            >Get In Touch</span
+          >
+          <h2 class="text-4xl font-bold mt-4 font-display">Contact Me</h2>
+          <div class="w-24 h-1 bg-teal-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+            <form id="contact-form" class="contact-form">
+              <div class="mb-6">
+                <label for="name" class="block text-gray-700 mb-2 font-medium"
+                  >Name <span class="required-field">*</span></label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div class="mb-6">
+                <label for="email" class="block text-gray-700 mb-2 font-medium"
+                  >Email <span class="required-field">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Your Email"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="subject"
+                  class="block text-gray-700 mb-2 font-medium"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="Subject"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 mb-2 font-medium"
+                  >Message <span class="required-field">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="form-input"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full">
+                <i class="fas fa-paper-plane mr-2"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+          <div class="md:w-1/2 md:pl-16" data-aos="fade-left">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-semibold mb-6 font-display">
+                Contact Information
+              </h3>
+              <div class="space-y-6">
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h4>Location</h4>
+                    <p>Bengaluru, Karnataka, India</p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4>Email</h4>
+                    <p>xyz@gmail.com</p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h4>Phone</h4>
+                    <p>+1 (123) 456-7890</p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <i class="fas fa-globe"></i>
+                  </div>
+                  <div>
+                    <h4>Website</h4>
+                    <p>https://ankitsharmablogs.com/</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8">
+                <h4 class="font-semibold mb-4">Follow Me</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://github.com/AnkitSharma-007"
+                    target="_blank"
+                    class="social-icon"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/ankitsharma-007/"
+                    target="_blank"
+                    class="social-icon"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://twitter.com/ankitsharma_007"
+                    target="_blank"
+                    class="social-icon"
+                  >
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a
+                    href="https://ankitsharmablogs.com/"
+                    target="_blank"
+                    class="social-icon"
+                  >
+                    <i class="fa-brands fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-16 bg-teal-600 text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center" data-aos="fade-up">
+            <div class="text-4xl font-bold mb-2 counter" data-target="125">
+              0
+            </div>
+            <p class="text-teal-100">Projects Completed</p>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl font-bold mb-2 counter" data-target="55">
+              0
+            </div>
+            <p class="text-teal-100">Happy Clients</p>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl font-bold mb-2 counter" data-target="11">
+              0
+            </div>
+            <p class="text-teal-100">Years Experience</p>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-4xl font-bold mb-2 counter" data-target="25">
+              0
+            </div>
+            <p class="text-teal-100">Awards Won</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div
+          class="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl p-10 md:p-16 text-white text-center relative overflow-hidden shadow-xl"
+          data-aos="zoom-in"
+        >
+          <div class="absolute inset-0 bg-pattern opacity-10"></div>
+          <div class="relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 font-display">
+              Ready to Start Your Project?
+            </h2>
+            <p class="text-lg text-teal-50 mb-8 max-w-2xl mx-auto">
+              Let's collaborate to create something amazing together. I'm
+              currently available for freelance work.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <a href="#contact" class="btn-white">
+                <span>Get in Touch</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+              <a href="#projects" class="btn-outline-white">
+                <span>View Portfolio</span>
+                <i class="fas fa-eye ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div>
+            <h2 class="text-2xl font-bold mb-6 font-display">
+              <span class="text-teal-400">&lt;</span>Ankit Sharma<span
+                class="text-teal-400"
+                >/&gt;</span
+              >
+            </h2>
+            <p class="text-gray-400 mb-6">
+              A passionate web developer focused on creating beautiful and
+              functional websites that help businesses grow.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://github.com/AnkitSharma-007"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ankitsharma-007/"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://twitter.com/ankitsharma_007"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                href="https://ankitsharmablogs.com/"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fa-brands fa-dribbble"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li><a href="#about" class="footer-link">About</a></li>
+              <li><a href="#services" class="footer-link">Services</a></li>
+              <li><a href="#projects" class="footer-link">Portfolio</a></li>
+              <li><a href="#blog" class="footer-link">Blog</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-6">Services</h3>
+            <ul class="space-y-3">
+              <li><a href="#" class="footer-link">Web Development</a></li>
+              <li><a href="#" class="footer-link">UI/UX Design</a></li>
+              <li><a href="#" class="footer-link">Responsive Design</a></li>
+              <li><a href="#" class="footer-link">E-Commerce</a></li>
+              <li><a href="#" class="footer-link">SEO Optimization</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-6">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to receive updates on new projects and blog posts.
+            </p>
+            <form class="mb-4">
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="w-full px-4 py-2 rounded-l-lg focus:outline-none text-gray-900"
+                />
+                <button
+                  type="submit"
+                  class="bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-r-lg transition-colors"
+                >
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+            <p class="text-gray-400 text-sm">
+              I'll never share your email with anyone else.
+            </p>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p class="text-gray-400">
+            &copy; 2025 <span class="text-teal-400">Ankit Sharma</span>. All
+            rights reserved.
+          </p>
+          <div class="mt-4 flex justify-center space-x-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-teal-400 transition-colors text-sm"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-teal-400 transition-colors text-sm"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-teal-400 transition-colors text-sm"
+              >Cookies Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
